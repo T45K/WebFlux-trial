@@ -5,9 +5,9 @@ create table task(
     progress varchar(10) not null,
     due_date datetime default null,
     complete_date datetime default null,
-    created_at datetime default current_timestamp,
-    primary key (id, created_at)
+    timestamp datetime default current_timestamp,
+    primary key (id)
 );
 
 insert into task (title, description, progress)
-values ('買い物に行く', 'カレーの材料を買う', 'todo')
+values ('買い物に行く', 'カレーの材料を買う', 'todo'), ('勉強する', '資格を取る', 'todo')
